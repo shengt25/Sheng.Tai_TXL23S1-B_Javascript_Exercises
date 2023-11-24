@@ -1,2 +1,2 @@
 const name = prompt("Enter your name:")
-document.write(`<p>Hello, ${name}!</p>`)
+document.querySelector("#greeting").innerHTML = `Hello, ${name}!`

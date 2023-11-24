@@ -1,7 +1,7 @@
 const count = parseInt(prompt("How many dices?"))
 const noi = parseInt(prompt("Enter number of interest:"))
 if (isNaN(count) || isNaN(noi)) {
-    document.write(`<p>Please enter valid numbers.</p>`)
+    document.querySelector("#title").innerHTML = "Please enter valid numbers."
 
 } else {
     const simulateCount = 10000
@@ -18,6 +18,6 @@ if (isNaN(count) || isNaN(noi)) {
         }
     }
     probability = (hit / simulateCount * 100).toFixed(2)
-    document.write(`<p>Simulated times: ${simulateCount}</p>`)
-    document.write(`<p>Probability to get sum ${noi} with ${count} dice is ${probability}%</p>`)
+    document.querySelector("#title").innerHTML = `Simulated times: ${simulateCount}`
+    document.querySelector("#result").innerHTML = `Probability to get sum ${noi} with ${count} dice is ${probability}%`
 }

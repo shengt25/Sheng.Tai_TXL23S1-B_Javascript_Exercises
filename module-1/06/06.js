@@ -15,4 +15,4 @@ if (isCal === false) {
     }
 
 }
-document.write(`<p>${result}</p>`)
+document.querySelector("#result").innerHTML = result

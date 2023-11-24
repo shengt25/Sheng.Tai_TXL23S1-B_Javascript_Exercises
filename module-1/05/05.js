@@ -8,4 +8,5 @@ if (isNaN(year)) {
         result = `${year} is leap year.`
     }
 }
-document.write(`<p>${result}</p>`)
+
+document.querySelector("#result").innerHTML = result

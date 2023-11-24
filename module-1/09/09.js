@@ -15,4 +15,4 @@ if (isNaN(num)) {
         }
     }
 }
-document.write(`<p>${result}</p>`)
+document.querySelector("#result").innerHTML = result

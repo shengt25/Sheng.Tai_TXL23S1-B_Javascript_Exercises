@@ -16,5 +16,4 @@ switch (result_id) {
         result_str = "Ravenclaw"
         break;
 }
-
-document.write(`<p>${name}, you are ${result_str}.</p>`)
+document.querySelector("#result").innerHTML = `${name}, you are ${result_str}.`

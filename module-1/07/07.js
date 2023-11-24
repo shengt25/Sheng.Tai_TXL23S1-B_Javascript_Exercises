@@ -1,16 +1,17 @@
 const count = parseInt(prompt("How many dices?"))
 if (isNaN(count)) {
-    document.write(`<p>Please enter a valid number.</p>`)
-
+    document.querySelector("#dice").innerHTML = "Please enter a valid number."
 } else {
     let num
     let sum = 0
-    document.write(`<p>Rolled ${count} dices: `)
+    let dices = ""
+
     for (let i = 0; i < count; i++) {
         num = Math.floor(Math.random() * 6 + 1)
         sum += num
-        document.write(`${num} `)
+        dices = `${dices} ${num}`
     }
-    document.write(`</p>`)
-    document.write(`<p>The sum is ${sum}</p>`)
+
+    document.querySelector("#dice").innerHTML = `Rolled ${count} dices: ${dices}`
+    document.querySelector("#sum").innerHTML = `The sum is ${sum}`
 }
