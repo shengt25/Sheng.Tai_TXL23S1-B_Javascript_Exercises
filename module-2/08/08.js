@@ -1,8 +1,6 @@
 function concat(strings) {
   let concatString = "";
-  strings.forEach((string) => {
-    concatString += string;
-  });
+  strings.forEach((string) => (concatString += string));
   return concatString;
 }
 
