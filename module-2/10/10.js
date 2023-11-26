@@ -1,4 +1,4 @@
-function hasCandidates(name, candidates) {
+function hasCandidate(name, candidates) {
   for (const candidate of candidates) {
     if (name === candidate.name) {
       return true;
@@ -22,7 +22,7 @@ function hasCandidates(name, candidates) {
     // ensure no dup name
     while (true) {
       const nameInput = prompt(`Name for candidate ${i + 1}`);
-      if (hasCandidates(nameInput, candidates))
+      if (hasCandidate(nameInput, candidates))
         alert("Duplicated candidate name, please enter a different one");
       else {
         candidates[i] = { name: nameInput, votes: 0 };
@@ -46,7 +46,7 @@ function hasCandidates(name, candidates) {
         `Voter ${i + 1}, who do you vote? (empty input to pass)`,
       );
       if (nameInput === "") break;
-      else if (!hasCandidates(nameInput, candidates))
+      else if (!hasCandidate(nameInput, candidates))
         alert(`${nameInput} is not a valid candidate, try again.`);
       else {
         for (const candidate of candidates) {
