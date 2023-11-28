@@ -7,6 +7,7 @@
 
   const liElem2 = document.createElement("li");
   liElem2.textContent = "Second item";
+  liElem2.classList.add("my-item");
   targetElem.appendChild(liElem2);
 
   const liElem3 = document.createElement("li");
